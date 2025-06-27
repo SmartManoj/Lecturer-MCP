@@ -1,0 +1,5 @@
+fastmcp
+pyautogui
+python-pptx
+uvicorn
+starlette 
