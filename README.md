@@ -21,9 +21,10 @@ An AI agent using the Model Context Protocol (MCP) to control Microsoft PowerPoi
 
 
 ## Setup
-1. Install dependencies:
+1. (Recommended) Create a Python 3.13 virtual environment using [uv](https://github.com/astral-sh/uv):
    ```sh
-   pip install fastmcp pyautogui python-pptx uvicorn starlette
+   uv venv .venv --python=3.13
+   uv pip install -r requirements.txt
    ```
 2. Adjust `PPT_PATH` and `PPT_FILE` in `server.py` if needed:
    - `PPT_PATH`: Path to PowerPoint executable
@@ -31,14 +32,14 @@ An AI agent using the Model Context Protocol (MCP) to control Microsoft PowerPoi
 
 ## Running the Server
 ```sh
-python server.py
+uv run python server.py
 ```
 - The server runs at `http://127.0.0.1:8000/sse` (SSE transport)
 
 ## Testing
 A test client is provided:
 ```sh
-python test_client.py
+uv run python test_client.py
 ```
 This will:
 - List available tools
